@@ -19,7 +19,7 @@ class Btc_backtest():
         df = df['Adj Close']
         df = df.dropna()
 
-        df["BTC-USD MA"] = df["BTC-USD"].rolling(window=DAYS).mean()
+        df["BTC-USD MA"] = df["BTC-USD"].rolling(window=self.days).mean()
 
         returns_df = []
 
